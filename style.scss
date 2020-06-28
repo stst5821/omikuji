@@ -1,0 +1,310 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input,
+select {
+    vertical-align: middle;
+}
+
+/*********************************
+ *    メディアクエリ                             
+ *********************************/
+
+$pc: 800px; // PC
+$tab: 680px; // タブレット
+$sp: 480px; // スマホ
+
+@mixin pc {
+    @media (max-width: ($pc)) {
+        @content;
+    }
+}
+
+@mixin tab {
+    @media (max-width: ($tab)) {
+        @content;
+    }
+}
+
+@mixin sp {
+    @media (max-width: ($sp)) {
+        @content;
+    }
+}
+
+/*********************************
+ *    汎用                             
+ *********************************/
+
+html {
+    font-size: 62.5%; //px と remと同じ数字にする
+}
+
+a {
+    color: #000;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.wrap {
+    overflow: hidden;
+    margin: 0px auto;
+}
+
+// メイン
+
+body {
+    // width: 100vw;
+    min-height: 100vh;
+    font-size: 1.6rem;
+    background-image: url(img/wa_blue.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px auto;
+    padding: 0px;
+}
+
+// メニューページ
+
+.omikuji_img-menu {
+    width: 30%;
+    max-width: 200px;
+    @include sp {
+        width: 40%;
+    }
+}
+
+.unsei {
+    img {
+        width: 15%;
+        @include pc {
+            width: 20%;
+        }
+        @include sp {
+            width: 30%;
+        }
+    }
+}
+
+.unsei_ttl {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.fa-twitter-square {
+    color: #1da1f2;
+}
+
+.intro {
+    margin-top: 5rem;
+}
+
+.item_wrap {
+    width: 50%;
+    background: #fff;
+    margin: 0 auto;
+    padding: 2rem;
+    @include pc {
+        width: 60%;
+    }
+    @include pc {
+        width: 80%;
+    }
+    @include sp {
+        width: 100%;
+    }
+}
+
+.item {
+    font-size: 2.5rem;
+}
+
+.item_line {
+    border: double 10px #fe400c; /* 太さ10pxの灰色の二重線の枠線をひく*/
+}
+
+.omikuji_img {
+    width: 10%;
+    @include pc {
+        width: 20%;
+    }
+    @include sp {
+        width: 30%;
+    }
+}
+
+/*********************************
+ *    footer                             
+ *********************************/
+
+footer {
+    padding-top: 15rem;
+    text-align: center;
+}
